@@ -1,0 +1,20 @@
+﻿{
+	"Patterns": [{
+		"Name": "Cellar",
+		"Exits": 6,
+		"Pattern": "-_---|-   -|--- -|  - -|  ---"
+	}, {
+		"Name": "Hallway",
+		"Exits": "EastWest",
+		"Pattern": "     |-----|-----|-----|     "
+	}, {
+		"Name": "Pool",
+		"Exits": "West",
+		"Pattern": "-----\n-www-\n-www-\n-www-\n-----"
+	},
+	{	"Name": "Wheel House",
+	    "Exits": "North",
+		"Pattern": "-----|-----|-- --|-----|-----"
+	}
+	]
+}

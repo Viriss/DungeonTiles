@@ -1,0 +1,5 @@
+C:\Users\andrew\Desktop\gbt2\DungeonTiles\obj\Debug\DungeonTiles.csprojResolveAssemblyReference.cache
+C:\Users\andrew\Desktop\gbt2\DungeonTiles\bin\Debug\DungeonTiles.dll
+C:\Users\andrew\Desktop\gbt2\DungeonTiles\bin\Debug\DungeonTiles.pdb
+C:\Users\andrew\Desktop\gbt2\DungeonTiles\obj\Debug\DungeonTiles.dll
+C:\Users\andrew\Desktop\gbt2\DungeonTiles\obj\Debug\DungeonTiles.pdb
