@@ -3,3 +3,8 @@ C:\Users\andrew\Desktop\gbt2\DungeonTiles\bin\Debug\DungeonTiles.dll
 C:\Users\andrew\Desktop\gbt2\DungeonTiles\bin\Debug\DungeonTiles.pdb
 C:\Users\andrew\Desktop\gbt2\DungeonTiles\obj\Debug\DungeonTiles.dll
 C:\Users\andrew\Desktop\gbt2\DungeonTiles\obj\Debug\DungeonTiles.pdb
+C:\Users\andrew\Documents\DungeonTiles\DungeonTiles\obj\Debug\DungeonTiles.csprojResolveAssemblyReference.cache
+C:\Users\andrew\Documents\DungeonTiles\DungeonTiles\obj\Debug\DungeonTiles.dll
+C:\Users\andrew\Documents\DungeonTiles\DungeonTiles\obj\Debug\DungeonTiles.pdb
+C:\Users\andrew\Documents\DungeonTiles\DungeonTiles\bin\Debug\DungeonTiles.dll
+C:\Users\andrew\Documents\DungeonTiles\DungeonTiles\bin\Debug\DungeonTiles.pdb

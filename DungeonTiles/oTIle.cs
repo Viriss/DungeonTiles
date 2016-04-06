@@ -1,12 +1,13 @@
 ﻿
 public enum TileType { empty, wood, stone, grass, water, lava }
-public enum Direction { 
+public enum Direction
+{
     none = 0,
     North = 1,
-    East = 2, 
+    East = 2,
     South = 4,
     West = 8,
-        
+
     All = North + East + South + West,
 
     NorthEast = 3,
@@ -28,6 +29,7 @@ public enum Direction {
 
 public class oTile
 {
+    public oRoom Parent;
     public int ID;
     public int X { get { return ID % 5; } }
     public int Y { get { return (ID - X) / 5; } }
@@ -40,11 +42,24 @@ public class oTile
     public Direction Walls;
     public Direction Exit;
 
+    public bool isHover;
+    public bool isSelectable;
+    public bool isSelected; //??
+    public bool isBlocked;
+    public string Token;
+
+
     public oTile(int ID, int RoomX, int RoomY)
     {
         this.ID = ID;
         this.RoomX = RoomX;
         this.RoomY = RoomY;
+
+        isHover = false;
+        isSelected = false;
+        isSelectable = false;
+        isBlocked = false;
+        Token = "";
     }
 
     public oTile(int ID, int RoomX, int RoomY, TileType Type)

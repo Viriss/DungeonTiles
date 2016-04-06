@@ -1,15 +1,68 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace gbt2
 {
     public partial class ucRoom : UserControl
     {
-        public oRoom Room;
+        private oRoom Room;
 
         public ucRoom()
         {
             InitializeComponent();
+        }
+
+        public void SetRoom(int RoomIndex)
+        {
+            Room = Engine.floor.Rooms[RoomIndex];
+            Engine.floor.DrawRooms += this.DrawRoom;
+        }
+
+        public void SetupRoom()
+        {
+            foreach (Label lbl in Controls)
+            {
+                lbl.MouseEnter += new System.EventHandler(this.lbl_MouseEnter);
+                lbl.MouseLeave += new System.EventHandler(this.lbl_MouseLeave);
+                lbl.Click += new System.EventHandler(this.lbl_Click);
+            }
+        }
+
+
+        private void lbl_MouseEnter(object sender, EventArgs e)
+        {
+            string lbl = ((Label)sender).Name;
+            int id = int.Parse(lbl.Replace("label", ""));
+            oTile t = Room.GetTileByIndex(--id);
+
+            Engine.floor.ClearHover();
+
+            if (t != null) { t.isHover = true; }
+
+            Engine.floor.DoRoomUpdate();
+        }
+        private void lbl_MouseLeave(object sender, EventArgs e)
+        {
+            string lbl = ((Label)sender).Name;
+            int id = int.Parse(lbl.Replace("label", ""));
+            oTile t = Room.GetTileByIndex(--id);
+
+            Engine.floor.ClearHover();
+
+            if (t != null) { t.isHover = false; }
+
+            Engine.floor.DoRoomUpdate();
+        }
+        private void lbl_Click(object sender, EventArgs e)
+        {
+            string lbl = ((Label)sender).Name;
+            int id = int.Parse(lbl.Replace("label", ""));
+            oTile t = Room.GetTileByIndex(--id);
+            if (t != null)
+            {
+                Engine.floor.SelectTile(Room.ID, t.ID);
+            }
         }
 
         public void DrawRoom()
@@ -87,7 +140,28 @@ namespace gbt2
                 g.FillRectangle(Brushes.Black, new Rectangle(0, 0, 4, 4));
             }
 
+
+            //blocked
+            //selectable
+            if (t.isSelectable)
+            {
+                g.FillRectangle(new SolidBrush(Color.FromArgb(150, Color.Green)), new Rectangle(0, 0, 32, 32));
+            }
+            else if (t.isBlocked)
+            {
+                g.FillRectangle(new SolidBrush(Color.FromArgb(150, Color.Red)), new Rectangle(0, 0, 32, 32));
+            }
+
+            //hover
+            if (t.isHover)
+            {
+                g.FillRectangle(new SolidBrush(Color.FromArgb(100, Color.White)), new Rectangle(0, 0, 32, 32));
+            }
+
+
+
             lbl.Image = img;
         }
+
     }
 }

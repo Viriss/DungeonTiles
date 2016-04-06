@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 
+
 public class oRoom
 {
+    public oFloor Parent;
+    public Guid ID;
     public string Name;
     public int RoomX;
     public int RoomY;
@@ -10,7 +13,17 @@ public class oRoom
 
     public oRoom()
     {
+        ID = Guid.NewGuid();
+        Name = "";
+        RoomX = 0;
+        RoomY = 0;
         Tiles = new List<oTile>();
+    }
+    public oRoom(string Name, int X, int Y) : this()
+    {
+        this.Name = Name;
+        this.RoomX = X;
+        this.RoomY = Y;
     }
 
     public void AddTile(int X, int Y, TileType Type, Direction Walls)
@@ -19,6 +32,7 @@ public class oRoom
         oTile t = new oTile(index, RoomX, RoomY);
         t.Type = Type;
         t.Walls = Walls;
+        t.Parent = this;
         Tiles.Add(t);
     }
     public void CreateEmptyRoom(TileType Type, Direction Exits)
@@ -39,9 +53,24 @@ public class oRoom
     {
         this.Name = Pattern.Name;
         string[] rows = Pattern.Pattern.Split(new string[] { Environment.NewLine, "\n", "|" }, StringSplitOptions.None);
-            
+
         CreateTilesFromPattern(rows);
         CreateWallsFromEdges(Pattern.Exits);
+    }
+
+    public void ClearHover()
+    {
+        foreach (oTile t in Tiles)
+        {
+            t.isHover = false;
+        }
+    }
+    public void ClearSelectable()
+    {
+        foreach (oTile t in Tiles)
+        {
+            t.isSelectable = false;
+        }
     }
 
     public int CoorToIndex(int X, int Y)
@@ -64,17 +93,7 @@ public class oRoom
         }
         return null;
     }
-    //public Point IndexToCoor(int Index)
-    //{
-    //    int x;
-    //    int y;
 
-    //    x = Index % 5;
-    //    y = Index / 5;
-
-    //    return new Point(x, y);
-    //}
-                
     private void CreateTilesFromPattern(string[] rows)
     {
         int rowIndex = 0;

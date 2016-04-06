@@ -10,11 +10,15 @@
 	}, {
 		"Name": "Pool",
 		"Exits": "West",
-		"Pattern": "-----\n-www-\n-www-\n-www-\n-----"
+		"Pattern": "-----|-www-|-www-|-www-|-----"
 	},
 	{	"Name": "Wheel House",
-	    "Exits": "North",
+	    "Exits": "EastSouthWest",
 		"Pattern": "-----|-----|-- --|-----|-----"
+	},
+	{ "Name": "Kitchen",
+	"Exits":"NorthEast",
+	"Pattern": "-----|-___-|-_ w-|-_  -|-----"
 	}
 	]
 }

@@ -23,3 +23,16 @@ C:\Users\andrew\Desktop\gbt2\gbt2\obj\Debug\gbt2.ucRoom.resources
 C:\Users\andrew\Desktop\gbt2\gbt2\obj\Debug\gbt2.csproj.GenerateResource.Cache
 C:\Users\andrew\Desktop\gbt2\gbt2\bin\Debug\DungeonTiles.dll
 C:\Users\andrew\Desktop\gbt2\gbt2\bin\Debug\DungeonTiles.pdb
+C:\Users\andrew\Documents\DungeonTiles\gbt2\bin\Debug\gbt2.exe.config
+C:\Users\andrew\Documents\DungeonTiles\gbt2\obj\Debug\gbt2.exe
+C:\Users\andrew\Documents\DungeonTiles\gbt2\obj\Debug\gbt2.pdb
+C:\Users\andrew\Documents\DungeonTiles\gbt2\obj\Debug\gbt2.csprojResolveAssemblyReference.cache
+C:\Users\andrew\Documents\DungeonTiles\gbt2\obj\Debug\gbt2.Form1.resources
+C:\Users\andrew\Documents\DungeonTiles\gbt2\obj\Debug\gbt2.Properties.Resources.resources
+C:\Users\andrew\Documents\DungeonTiles\gbt2\obj\Debug\gbt2.ucRoom.resources
+C:\Users\andrew\Documents\DungeonTiles\gbt2\obj\Debug\gbt2.csproj.GenerateResource.Cache
+C:\Users\andrew\Documents\DungeonTiles\gbt2\bin\Debug\App_Data\RoomPatterns.txt
+C:\Users\andrew\Documents\DungeonTiles\gbt2\bin\Debug\gbt2.exe
+C:\Users\andrew\Documents\DungeonTiles\gbt2\bin\Debug\gbt2.pdb
+C:\Users\andrew\Documents\DungeonTiles\gbt2\bin\Debug\DungeonTiles.dll
+C:\Users\andrew\Documents\DungeonTiles\gbt2\bin\Debug\DungeonTiles.pdb
